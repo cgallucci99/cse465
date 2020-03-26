@@ -1,0 +1,8 @@
+Name: <<NAME>> (<<COURSE>>)
+UniqueID: <<ID>>
+Total: <<TOTAL>>/100
+Subtotal: <<SUBTOTAL>>
+Hours Late: <<HOURSLATE>>
+Late deduction: <<LATEDEDUCTION>>
+<<P1>>/50 Problem #1: <<P1COMMENTS>>
+<<P2>>/50 Problem #2: <<P2COMMENTS>>

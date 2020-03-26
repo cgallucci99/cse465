@@ -1,0 +1,5 @@
+NAME,ID,COURSE,HOURSLATE,LATEDEDUCTION,P1,P1COMMENTS,P2,P2COMMENTS,SUBTOTAL,TOTAL
+Steve Smith,smiths,465,1,5,50,Excellent work,50,Excellent work,100,95
+Mark Watson,watsonm,465,ontime,0,50,Excellent work,40,Does not perform error handling,90,90
+Kenny Briddle,briddlek,465,ontime,0,40,Does not perform error handling,40,Does not perform error handling,80,80
+Bill Haygood,haygoodb,565,ontime,0,0,P1 not submitted,0,P2 not submitted,0,0
