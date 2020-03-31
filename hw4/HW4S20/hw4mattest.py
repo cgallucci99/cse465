@@ -56,7 +56,7 @@ def demoLTMatrix3D():
 		display3D(mat)
 
 demoLTMatrix2D()
-demoLTMatrix3D()
+#demoLTMatrix3D()
 
 ##################### OUTPUT #####################
 #2D Matrix info ================
