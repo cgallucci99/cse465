@@ -18,26 +18,14 @@ cols = {}
 for i in range(0, len(headers)):
     cols[headers[i]] = i
 
-# #find ID column
-# id = -1
-# for i in range(0, len(headers)):
-#     if headers[i] == "ID":
-#         id = i
-#         break
-
-#print(cols)
-
 #loop through each line of CSV file
 for i in range(1, len(lines)):
     line = lines[i][0:len(lines[i])-1].split(',')
-    #print(line)
     filename = line[cols["ID"]] + ".txt"
     userFile = open(filename, "w")
     result = temp
     for col in cols.keys():
-        #print(result)
         index = result.find("<<" + col + ">>")
         length = len("<<" + col + ">>")
         result = result[0:index] + line[cols[col]] + result[index+length:]
-    print(result)
     userFile.write(result)

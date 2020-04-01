@@ -1,0 +1,8 @@
+Name: Kenny Briddle (465)
+UniqueID: briddlek
+Total: 80/100
+Subtotal: 80
+Hours Late: ontime
+Late deduction: 0
+40/50 Problem #1: Does not perform error handling
+40/50 Problem #2: Does not perform error handling

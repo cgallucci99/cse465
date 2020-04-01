@@ -1,0 +1,8 @@
+Name: Bill Haygood (565)
+UniqueID: haygoodb
+Total: 0/100
+Subtotal: 0
+Hours Late: ontime
+Late deduction: 0
+0/50 Problem #1: P1 not submitted
+0/50 Problem #2: P2 not submitted
