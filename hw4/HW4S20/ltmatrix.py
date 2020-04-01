@@ -38,7 +38,9 @@ class ltMatrix:
         if not (other.N == self.N):
             raise Exception('cannot add different sized matrices')
         else:
-            result = self.arr.copy()
-            for i in range(0,self.size()+1):
-                result[i] = self.arr[i] + other.arr[i]
+            result = ltMatrix(self.N)
+            for i in range(0,self.N):
+                for j in range(0, self.N):
+                    value = self.get(i,j) + other.get(i,j)
+                    result.set(i,j,value)
             return result
