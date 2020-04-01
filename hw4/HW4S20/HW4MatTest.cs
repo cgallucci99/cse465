@@ -28,7 +28,7 @@ namespace HW4Test {
 			}
 			Console.WriteLine();
 		}
-		public static void Display(LTMatrix3D mat) {
+		/*public static void Display(LTMatrix3D mat) {
 			Console.WriteLine("3D Matrix info ================");
 			int N = mat.Size();
 			Console.WriteLine("The N in NxNxN: " + N);
@@ -42,7 +42,7 @@ namespace HW4Test {
 				}
 			}
 			Console.WriteLine();
-		}
+		}*/
 		public static void DemoLTMatrix2D() {
 			LTMatrix m4a = new LTMatrix(4);
 			LTMatrix m4b = new LTMatrix(4);
@@ -64,15 +64,15 @@ namespace HW4Test {
 			Display(m4b);
 			Display(m6a);
 		}
-		public static void DemoLTMatrix3D() {
+		/*public static void DemoLTMatrix3D() {
 			for (int N=1; N<=4; N++) {
 				LTMatrix3D m = new LTMatrix3D(N);
 				Display(m);
 			}
-		}
+		}*/
 		public static void Main(string [] args) {
 			DemoLTMatrix2D();
-			DemoLTMatrix3D();
+			//DemoLTMatrix3D();
 		}
 	}
 }

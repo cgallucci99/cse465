@@ -1,10 +1,11 @@
+using System;
 namespace HW4 {
     public class LTMatrix {
         private int[] arr;
         private int n;
         
         public LTMatrix(int N) {
-            int numElements = (int) ((1+N)*N)/2);
+            int numElements = (int) ((1+N)*N)/2;
             arr = new int[numElements];
             n = N;
         }
@@ -32,7 +33,7 @@ namespace HW4 {
 
         public void Set(int row, int column, int V) {
             if (row > (n - 1) && column > (n - 1)) {
-                throw new Exception('out of bounds');
+                throw new Exception("out of bounds");
             } else{
                 int index = this.TwoDToOneDIndex(row, column);
                 arr[index] = V;
@@ -48,14 +49,14 @@ namespace HW4 {
             }
         }
 
-        public LTMatrix operator+ (LTMatrix other) {
-            if (n != other.n) {
+        public static LTMatrix operator+ (LTMatrix lt1, LTMatrix lt2) {
+            if (lt1.Size() != lt2.Size()) {
                 throw new Exception("cannot add different sized matrices");
             } else {
-                LTMatrix result = new LTMatrix(n);
-                for (int i = 0; i < n; i++) {
-                    for (int j = 0; j < n; j++) {
-                        int value = this.Get(i,j) + other.Get(i,j);
+                LTMatrix result = new LTMatrix(lt1.Size());
+                for (int i = 0; i < lt1.Size(); i++) {
+                    for (int j = 0; j < lt1.Size(); j++) {
+                        int value = lt1.Get(i,j) + lt2.Get(i,j);
                         result.Set(i,j, value);
                     }
                 }
