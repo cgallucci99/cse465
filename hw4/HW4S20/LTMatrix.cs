@@ -23,7 +23,7 @@ namespace HW4 {
         }
 
         public int TwoDToOneDIndex(int row, int column) {
-            if (row < column) {
+            if (row < column || row < 0 || column < 0) {
                 throw new Exception("row should be >= column");
             } else {
                 int index = (row*(row+1))/2 + column;
@@ -41,7 +41,7 @@ namespace HW4 {
         }
 
         public int Get(int row, int column) {
-            if(row <= (n - 1) && column <= (n - 1) && row < column) {
+            if(row <= (n - 1) && column <= (n - 1) && row < column && row >= 0 && column >= 0) {
                 return 0;
             } else {
                 int index = this.TwoDToOneDIndex(row, column);

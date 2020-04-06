@@ -13,7 +13,7 @@ class ltMatrix:
         return self.arr
 
     def twoDToOneDIndex(self, row, column):
-        if row < column:
+        if row < column or row < 0 or column < 0:
             raise Exception('row should be >= column')
         else:
             index = (row*(row+1))//2 + column
@@ -24,11 +24,10 @@ class ltMatrix:
             raise Exception('out of bounds')
         else:
             index = self.twoDToOneDIndex(row, column)
-            #print("row: %d column: %d index: %d", row, column, index)
             self.arr[index] = V
     
     def get(self, row, column):
-        if row <= (self.N - 1) and column <= (self.N - 1) and row < column:
+        if row <= (self.N - 1) and column <= (self.N - 1) and row < column and row >= 0 and column >= 0:
             return 0
         else:
             index = self.twoDToOneDIndex(row, column)
