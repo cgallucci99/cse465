@@ -1,0 +1,8 @@
+Name: Steve Smith (465)
+UniqueID: smiths
+Total: 95/100
+Subtotal: 100
+Hours Late: 1
+Late deduction: 5
+50/50 Problem #1: Excellent work
+50/50 Problem #2: Excellent work

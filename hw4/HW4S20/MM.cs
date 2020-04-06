@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
+using System.Collections.Generic;
 namespace HW4 {
     public class MM {
         public static void Main(string[] args) {
@@ -25,9 +26,10 @@ namespace HW4 {
                     string search = "<<"+column.Key+">>";
                     int index = result.IndexOf(search);
                     int length = search.Length;
-                    result = result.Substring(0,index) + data[column.Value] + result.Substring(index+length);
+                    result = result.Substring(0,index) + data[i][column.Value] + result.Substring(index+length);
                 }
                 output.Write(result);
+		output.Close();
             }
         }
     }
