@@ -14,8 +14,8 @@ def loop1(N):
 def loop2(N):
 	total = 0.0
 	for i in range(N):
-        if not i == 7:
-            total = cos(i)
+		if not i == 7:
+			total = cos(i)
 	return total
 
 # Replace the given loop with another loop that
