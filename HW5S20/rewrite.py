@@ -5,9 +5,8 @@ from math import *
 def loop1(N):
 	total = 0.0
 	for i in range(N):
-		if i % 2 == 0:
-			continue
-		total = cos(i)
+		if i % 2 == 1:
+			total = cos(i)
 	return total
 
 # Replace the given loop with another loop that
@@ -15,9 +14,8 @@ def loop1(N):
 def loop2(N):
 	total = 0.0
 	for i in range(N):
-            if i == 7:
-                break
-	    total = cos(i)
+        if not i == 7:
+            total = cos(i)
 	return total
 
 # Replace the given loop with another loop that
