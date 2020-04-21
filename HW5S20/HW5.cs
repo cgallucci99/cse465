@@ -22,9 +22,9 @@ namespace HW5 {			// Don't change namespace
 			Type strT = Type.GetType("System.String");
 			Type t = obj.GetType();
 			foreach (FieldInfo info in t.GetFields()) {
-				if (info.MemberType == MemberType.Field) {
+				if (info.MemberType == MemberTypes.Field) {
 					if (info.FieldType == strT) {
-						string s = info.GetValue(obj);
+						string s = (string) info.GetValue(obj);
 						if (s.IndexOf(searchString) > -1) {
 							return true;
 						}
