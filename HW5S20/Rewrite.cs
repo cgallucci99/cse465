@@ -21,7 +21,7 @@ namespace Rewrite {
 			int i = 1;
 			int x;
 			while (Sum(i++) < 10000) {
-				x = Sum(i);
+				x = Sum(i - 1);
 				total += x;
 			}
 			return total;
