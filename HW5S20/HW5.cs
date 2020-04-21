@@ -16,6 +16,21 @@ namespace HW5 {			// Don't change namespace
 		 * This code will not crash
 		 */
 		public static bool SearchStructure(Object obj, String searchString) {
+			if (obj == null) {
+				return false;
+			}
+			Type strT = Type.GetType("System.String");
+			Type t = obj.GetType();
+			foreach (FieldInfo info in t.GetFields()) {
+				if (info.MemberType == MemberType.Field) {
+					if (info.FieldType == strT) {
+						string s = info.GetValue(obj);
+						if (s.IndexOf(searchString) > -1) {
+							return true;
+						}
+					}
+				}
+			}
 			return false;
 		}
 		static void Main(string[] args) {
