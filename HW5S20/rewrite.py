@@ -22,17 +22,21 @@ def loop2(N):
 # does not use break or continue
 def loop3(N, F):
 	total = 0.0
+	flag = False
 	for i in range(N):
 		if F(i):
-			break
-		total = i
+			flag = True
+		if not flag:
+			total = i
 	return total
 
 # Replace the following code with one that does not
 # use the ternary operator
 def expression(N):
-	return N if N >= 0 else -1
-
+	if N >= 0:
+		return N
+	else:
+		return -1
 
 print(loop1(5))
 print(loop2(5))
