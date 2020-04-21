@@ -7,8 +7,8 @@ namespace Rewrite {
 		// operators are not used.
 		public static int CompoundAssignment(int N) {
 			int M = 3 * N;
-			N *= 3;
-			N += ++M;
+			N = N * 3;
+			N = N + M + 1;
 			return N;
 		}
 		public static int Sum(int N) {
@@ -20,7 +20,8 @@ namespace Rewrite {
 			int total = 0;
 			int i = 1;
 			int x;
-			while ((x = Sum(i++)) < 10000) {
+			while (Sum(i++) < 10000) {
+				x = Sum(i);
 				total += x;
 			}
 			return total;
@@ -36,19 +37,19 @@ namespace Rewrite {
 		// them. For every operator, there must be one pair of 
 		// of parenthesis.
 		public static int OperatorPrecedence1(int A, int B) {
-			return A + B * 100 / A + A;
+			return ((A + ((B * 100) / A)) + A);
 		}
 		public static int OperatorPrecedence2(int A, int B) {
-			return A << 2 >> B;
+			return ((A << 2) >> B);
 		}
 		public static int OperatorPrecedence3(int A, int B) {
-			return A | B ^ A & 0xFF;
+			return (A | (B ^ (A & 0xFF)));
 		}
 		public static int OperatorPrecedence4(int A, int B) {
-			return B += 3 * A;
+			return (B += (3 * A));
 		}
 		public static bool OperatorPrecedence5(bool A, bool B, bool C, bool D) {
-			return ! A == B && C || D;
+			return ((((! A) == B) && C) || D);
 		}
 		public static void Main(string [] args) {
 			Console.WriteLine(CompoundAssignment(10));
