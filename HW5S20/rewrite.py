@@ -1,0 +1,42 @@
+from math import *
+
+# Replace the given loop with another loop that
+# does not use break or continue
+def loop1(N):
+	total = 0.0
+	for i in range(N):
+		if i % 2 == 0:
+			continue
+		total = cos(i)
+	return total
+
+# Replace the given loop with another loop that
+# does not use break or continue
+def loop2(N):
+	total = 0.0
+	for i in range(N):
+            if i == 7:
+                break
+	    total = cos(i)
+	return total
+
+# Replace the given loop with another loop that
+# does not use break or continue
+def loop3(N, F):
+	total = 0.0
+	for i in range(N):
+		if F(i):
+			break
+		total = i
+	return total
+
+# Replace the following code with one that does not
+# use the ternary operator
+def expression(N):
+	return N if N >= 0 else -1
+
+
+print(loop1(5))
+print(loop2(5))
+print(loop3(10, lambda x : x >= 5))
+print(expression(5))
