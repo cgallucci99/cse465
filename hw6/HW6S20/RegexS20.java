@@ -15,13 +15,19 @@ public class RegexS20 {
 	 * No intervening spaces.
 	 */
 	public static boolean isLongPhoneNumber(String str) {
-		return false;
+		String ptrn = "\\d\\d\\d\\-\\d\\d\\d\\-\\d\\d\\d\\d";
+		Pattern p = Pattern.compile(ptrn);
+		Matcher m = p.matcher(str);
+		return m.matches();
 	}
 	/*
 	 * Same as above, but the 3 digit blocks do not start with a 0 or 1,
 	 */
 	public static boolean isLongPhoneNumber2(String str) {
-		return false;
+		String ptrn = "[2-9]\\d\\d\\-[2-9]\\d\\d\\-\\d\\d\\d\\d";
+		Pattern p = Pattern.compile(ptrn);
+		Matcher m = p.matcher(str);
+		return m.matches();
 	}
 	/*
 	 * The C# definition of real_literal three parts to it.
@@ -31,7 +37,10 @@ public class RegexS20 {
 	 * It is this part that you are to recognize.
 	 */
 	public static boolean isRealLiteralPart1(String str) {
-		return false;
+		String ptrn = "\\d*\\.\\d+([eE]\\-?\\d+)?[fFdDmM]?";
+		Pattern p = Pattern.compile(ptrn);
+		Matcher m = p.matcher(str);
+		return m.matches();
 	}
 	/*
 	 * Determines if string constitutes a legal email address.
@@ -39,7 +48,10 @@ public class RegexS20 {
 	 * https://help.returnpath.com/hc/en-us/articles/220560587-What-are-the-rules-for-email-address-syntax-
 	 */
 	public static boolean isEmailAddress(String str) {
-		return false;
+		String ptrn = "[a-zA-Z0-9.]{1,64}@[a-zA-Z0-9-.]{1,253}\\.[a-z.]+";
+		Pattern p = Pattern.compile(ptrn);
+		Matcher m = p.matcher(str);
+		return m.matches();
 	}
 	public static void main(String [] args) {
 		System.out.println(isLongPhoneNumber("513-529-1809"));		// true
